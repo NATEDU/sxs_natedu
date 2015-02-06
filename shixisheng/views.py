@@ -41,12 +41,12 @@ def new(request):
 	l.email=request.POST['email']
 	l.password=request.POST['password']
 	l.save()
-	return redirect("/hello")
+	return redirect("")
 
 def delete(request,id):
 	s=Student.objects.get(id=int(id))
 	s.delete()
-	return redirect("/hello/sdfgh")
+	return redirect("sdfgh")
 
 def edit_view(request,id):
 	s=Student.objects.get(id=int(id))
@@ -59,6 +59,6 @@ def edit(request,id):
 	s.name=request.POST['name']
 	s.address=request.POST['address']
 	s.save()
-	return redirect("/hello/sdfgh")
+	return redirect("sdfgh")
 
 
