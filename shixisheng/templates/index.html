@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="/static/css/head/style.css">
+<link rel="stylesheet" href="/static/css/head/bootstrap.min.css">
+<link href="http://the8guild.com/themes/html/kedavra/masterslider/style/masterslider.css" rel="stylesheet" media="screen">
+<link href="http://the8guild.com/themes/html/kedavra/css/styles.css" rel="stylesheet" media="screen">
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>-->
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/modernizr.custom.js"></script>
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46803427-2']);
+              _gaq.push(['_trackPageview']);
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+<link href="http://htmlcoder.me/preview/idea/v.1.0/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="http://htmlcoder.me/preview/idea/v.1.0/style-switcher/style-switcher.css" rel="stylesheet">
+<link href="http://htmlcoder.me/preview/idea/v.1.0/css/style.css" rel="stylesheet">
+<link href="http://themes.lucky-roo.com/rinjani-v1.4/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://themes.lucky-roo.com/rinjani-v1.4/assets/plugins/animate-css/animate.min.css" rel="stylesheet" type="text/css">
+<link href="http://themes.lucky-roo.com/rinjani-v1.4/assets/css/rj-video-background.css" rel="stylesheet" type="text/css">
+<link href="http://themes.lucky-roo.com/rinjani-v1.4/assets/css/features.css" rel="stylesheet" type="text/css">
+<link href="http://demopavothemes.com/pav_food_store/catalog/view/theme/pav_foodstore/stylesheet/font-awesome.min.css" rel="stylesheet" />
+<link rel='stylesheet' id='fontawesome-css'  href='http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' type='text/css' media='' />
+</head>
+<body id="top">
+
+<nav class="navbar navbar-inverse navbar-no-bg" role="navigation"  >
+  <div class="container" >
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1" > <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand"  style="text-decoration:none; font-size:50px; color:#3399FF; padding:10px;" href="#">{{站名}}</a> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="top-navbar-1">
+      <ul class="nav navbar-nav navbar-right">
+        {%for x in href%}
+        <li><a class="scroll-link" style="text-decoration:none; font-size:20px;"  href="{{x.link}}">{{x.name}}</a></li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="gray-bg double-padding-top double-padding-bottom">
+  <div class="page-heading center" id="company">
+    <h1 class="animation" data-animation="fadeInDown">{{第一块标题}}</h1>
+  </div>
+  <div class="ms-partialview-template fullwidth space-top" id="fs-partial-view-info">
+    <div class="master-slider ms-skin-default" id="fs-partial-view"> {%for x in all_company%}
+      <div class="ms-slide"> <img src="http://the8guild.com/themes/html/kedavra/masterslider/blank.gif" data-src="/media/{{x.img}}" alt="Corporate Blog"/>
+        <div class="ms-info">
+          <h3>{{x.name}}</h3>
+          <p>{{x.info}}</p>
+          <div class="space-top"><a class="btn btn-md btn-primary btn-center" href="/all_company">更多企业</a></div>
+        </div>
+      </div>
+      {%endfor%} </div>
+  </div>
+</section>
+<section>
+  <div class="section gray-bg clearfix" id="student">
+  <div class="owl-carousel content-slider">
+  {%for x in student%}
+  <div class="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="title">{{x.info}}</h2>
+          <div class="testimonial-image"> <img src="/media/{{x.img}}" alt="Jane Doe" title="Jane Doe" class="img-circle"> </div>
+          <div class="testimonial-body">
+            <p>{{x.post}}</p>
+            <div class="testimonial-info-1">{{x.name}}</div>
+            <div class="testimonial-info-2">{{x.company}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%} </section>
+<section id="rj-why-us" class="section">
+  <div class="section-inner">
+  <div class="container section-content" id="hottop">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="section-title text-center">
+        <h2 class="main-title">{{第二块标题}}</h2>
+        <span class="section-line"></span> </div>
+      <!-- //.section-title --> 
+    </div>
+  </div>
+  <!-- //.row -->
+  
+  <div class="row">
+  {%for x in text%}
+  <div class="col-sm-4 col-md-4">
+    <div class="content-box style-one top-column clearfix"> <span class="content-box-icon"> <i class="fa fa-suitcase"></i> </span>
+      <div class="content-box-text">
+        <h4>{{x.name}}</h4>
+        <p>{{x.info}}</p>
+      </div>
+      <!-- //.content-box-text --> 
+    </div>
+    <!-- //.content-box --> 
+  </div>
+  {%endfor%} </section>
+<section id="flow" class="section">
+  <div class="section-inner">
+    <div class="container section-content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title text-center">
+            <h2 class="main-title">{{第三块标题}}</h2>
+            <span class="section-line"></span> </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        <ul class="timeline">
+          {%for x in flow%}
+          <li class="{% cycle '' 'timeline-inverted' %}">
+            <div class="timeline-badge"> <i class="fa fa-dot-circle-o"></i> </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"> {{x.title}} </h4>
+                <img src="/media/{{x.img}}" alt="" class="img-responsive"> </div>
+              <div class="timeline-body">
+                <p>{{x.info}}</p>
+              </div>
+            </div>
+          </li>
+          {%endfor%}
+          </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="footer-content">
+          <div class="logo-footer"><img id="aboutus" src="/media/{{logo}}" alt=""></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p>{{网站宗旨}}</p>
+              <ul class="social-links circle">
+                <li class="weibo"><a target="_blank" href="http://weibo.com/2182496353"><i class="fa fa-weibo"></i></a></li>
+                <li class="weixin"><a target="_blank" href="http://wx.qq.com/"><i class="fa fa-weixin"></i></a></li>
+                <li class="qq"><a target="_blank" href="http://www.qq.com"><i class="fa fa-qq"></i></a></li>
+                <li class="renren"><a target="_blank" href="http://www.renren.com"><i class="fa fa-renren"></i></a></li>
+                
+                <!-- JiaThis Button BEGIN 
+                    <div class="jiathis_style_32x32">
+                      <a class="jiathis_button_qzone"></a>
+                      <a class="jiathis_button_tsina"></a>
+                      <a class="jiathis_button_tqq"></a>
+                      <a class="jiathis_button_weixin"></a>
+                      <a class="jiathis_button_renren"></a>                  
+                      <a class="jiathis_counter_style"></a>
+                    </div>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1393995811192987" charset="utf-8"></script>--> 
+                
+                <!-- JiaThis Button END -->
+                
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-icons">
+                <li><i class="fa fa-map-marker pr-10"></i>{{地址}}</li>
+                <li><i class="fa fa-phone pr-10"></i>{{手机}}</li>
+                <li><i class="fa fa-fax pr-10"></i>{{传真}}</li>
+                <li><i class="fa fa-envelope-o pr-10"></i>{{邮箱}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-bottom hidden-lg hidden-xs"></div>
+      <div class="col-sm-6 col-md-2">
+        <div class="footer-content">
+          <h2>链接</h2>
+          <nav>
+            <ul class="nav nav-pills nav-stacked">
+              {%for x in href%}
+              <li><a href="{{x.link}}">{{x.name}}</a></li>
+              {%endfor%}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-md-offset-1">
+        <div class="footer-content">
+          <h2>友情链接</h2>
+          <div class="gallery row"> {%for x in partner%}
+            <div class="gallery-item col-xs-4">
+              <div class="overlay-container"> <img src="/media/{{x.img}}" alt=""> <a href="{{x.link}}" class="overlay small"> <i class="fa fa-link"></i> </a> </div>
+            </div>
+            {%endfor%} </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-bottom hidden-lg hidden-xs"></div>
+  </div>
+</div>
+
+<!-- JiaThis Button BEGIN --> 
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?uid=1393995811192987&type=left" charset="utf-8"></script> 
+<!-- JiaThis Button END --> 
+
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46803427-2']);
+              _gaq.push(['_trackPageview']);
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery-1.11.1.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery.easing.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/bootstrap.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/smoothscroll.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/utilities.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/foundation.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.placeholder.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/icheck.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.validate.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/waypoints.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/isotope.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/masterslider.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/owl.carousel.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/lightGallery.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.stellar.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.parallax.min.js"></script> 
+<script src="http://the8guild.com/themes/html/kedavra/js/scripts.js"></script>
+<noscript>
+<div style="display:inline;"> </div>
+</noscript>
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/plugins/modernizr.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/plugins/jquery.appear.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/js/template.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/js/custom.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="http://htmlcoder.me/preview/idea/v.1.0/plugins/owl-carousel/owl.carousel.js"></script> 
+<script src="/static/js/themes.lucky-roo/rinjani.js"></script> 
+<script src="/static/js/themes.lucky-roo/animation.js"></script> 
+<script src="/static/js/themes.lucky-roo/charts.js"></script> 
+<script src="/static/js/themes.lucky-roo/content-boxes.js"></script> 
+<script src="/static/js/themes.lucky-roo/countdown.js"></script> 
+<script src="/static/js/themes.lucky-roo/counters.js"></script> 
+<script src="/static/js/themes.lucky-roo/funny-boxes.js"></script> 
+<script src="/static/js/themes.lucky-roo/meet-the-team.js"></script> 
+<script src="/static/js/themes.lucky-roo/portfolio.js"></script> 
+<script src="/static/js/themes.lucky-roo/pricing-tables.js"></script> 
+<script src="/static/js/themes.lucky-roo/testimonials.js"></script> 
+<script src="/static/js/themes.lucky-roo/timeline.js"></script> 
+<script src="/static/js/themes.lucky-roo/jquery.magnific-popup.min.js"></script> 
+<script src="/static/js/themes.lucky-roo/jquery.sticky.js"></script> 
+<script src="http://themes.lucky-roo.com/rinjani-v1.4/assets/plugins/jquery-inview/jquery.inview.min.js"></script> 
+<script src="/static/js/themes.lucky-roo/jquery.easypiechart.min.js"></script> 
+<script src="/static/js/themes.lucky-roo/jquery.countdown.min.js"></script> 
+<script src="/static/js/themes.lucky-roo/detectmobilebrowser.js"></script>
+<!--backtop-->
+
+<script type="text/javascript" src="/static/js/jquery.goup.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $.goup({
+                trigger: 100,
+                bottomOffset: 150,
+                locationOffset: 100,
+                title: '返回顶部',
+                titleAsText: true
+            });
+
+        });
+    </script>
+<!--backtop end-->
+
+</body>
+</html>
