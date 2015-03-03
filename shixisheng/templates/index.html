@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="/static/css/head/style.css">
 <link rel="stylesheet" href="/static/css/head/bootstrap.min.css">
-<link href="http://the8guild.com/themes/html/kedavra/masterslider/style/masterslider.css" rel="stylesheet" media="screen">
-<link href="http://the8guild.com/themes/html/kedavra/css/styles.css" rel="stylesheet" media="screen">
+<link href="/static/css/the8guild/masterslider.css" rel="stylesheet" media="screen">
+<link href="/static/css/the8guild/styles.css" rel="stylesheet" media="screen">
 <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5DLwPPVAz88_k0yO2nmFe7T9k1urQs84"></script>-->
 <script src="http://the8guild.com/themes/html/kedavra/js/libs/modernizr.custom.js"></script>
 <script type="text/javascript">
@@ -35,16 +35,16 @@
 </head>
 <body id="top">
 
-<nav class="navbar navbar-inverse navbar-no-bg" role="navigation"  >
-  <div class="container" >
+<nav class="navbar navbar-inverse navbar-no-bg" style="height:90px; background-color:#F1F1F1; border-style:none" role="navigation"  >
+  <div class="container" style="height:90px;">
     <div class="navbar-header" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1" > <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand"  style="text-decoration:none; font-size:50px; color:#3399FF; padding:10px;" href="#">{{站名}}</a> </div>
+      <a class="navbar-brand"  style="text-decoration:none; color:#3399FF; padding:1px;" href="#"><div class="logo-footer"><img id="aboutus" src="/media/{{logo}}" alt=""></div></a> </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="top-navbar-1">
       <ul class="nav navbar-nav navbar-right">
         {%for x in href%}
-        <li><a class="scroll-link" style="text-decoration:none; font-size:20px;"  href="{{x.link}}">{{x.name}}</a></li>
+        <li><a class="scroll-link" style="text-decoration:none; font-size:20px; color:black;"  href="{{x.link}}">{{x.name}}</a></li>
         {%endfor%}
       </ul>
     </div>
@@ -233,23 +233,31 @@
           s.parentNode.insertBefore(ga, s);
       })();
     </script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery-1.11.1.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/libs/jquery.easing.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/bootstrap.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/smoothscroll.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/utilities.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/foundation.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.placeholder.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/icheck.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.validate.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/waypoints.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/isotope.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/masterslider.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/owl.carousel.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/lightGallery.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.stellar.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/plugins/jquery.parallax.min.js"></script> 
-<script src="http://the8guild.com/themes/html/kedavra/js/scripts.js"></script>
+
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/libs/jquery-1.11.1.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/libs/jquery.easing.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/bootstrap.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/smoothscroll.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/utilities.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/foundation.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.placeholder.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/icheck.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.validate.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/waypoints.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/isotope.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/masterslider.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/owl.carousel.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/lightGallery.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.stellar.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.parallax.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/chart.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery-numerator.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.countdown.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.easypiechart.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/jquery.nouislider.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/plugins/card.min.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/js/scripts.js"></script>
+    <script src="http://the8guild.com/themes/html/kedavra/v2.0/2014/style-switcher/style-switcher.js"></script>
 <noscript>
 <div style="display:inline;"> </div>
 </noscript>
@@ -295,6 +303,14 @@
         });
     </script>
 <!--backtop end-->
+<script>
+  $(document).ready(function(){
+    function next(){
+      $('.ms-nav-next').click();
+    }
+  setInterval(next,4000);
+});
 
+</script>
 </body>
 </html>
